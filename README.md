@@ -6,7 +6,6 @@ A clean, responsive personal namecard website deployed at [jonathanmeneses.com](
 
 - HTML5
 - CSS3
-- Template based on Identity by HTML5 UP
 
 ## Deployment
 
@@ -37,7 +36,3 @@ Then visit `http://localhost:8000`
 ## Author
 
 Jonathan Meneses
-
-## License
-
-Design by [HTML5 UP](http://html5up.net) - Free for personal and commercial use under the CCA 3.0 license.
