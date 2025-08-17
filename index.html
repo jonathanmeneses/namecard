@@ -20,6 +20,7 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="./static/assets/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<script src="./static/script.js" defer></script>
 </head>
 
 <body class="layered-bg">
@@ -58,7 +59,8 @@
 			<section>
 				<h2>What I'm Building</h2>
 				<ul>
-					<li>Practice & financial tools for therapists</li>
+					<li>Practice & financial tools for self-employed health and wellness professionals <br>
+						(e.g. private practice therapists)</li>
 					<li>Automation workflows for service-based businesses</li>
 					<li>Fitness & habit tracking (personal project)</li>
 				</ul>
@@ -83,6 +85,48 @@
 					<li>Automation & Tooling: Zapier, n8n, MCPs</li>
 					<li>Primary AI Tools: Cursor, v0, Claude</li>
 				</ul>
+			</section>
+
+			<section>
+				<h2>Projects</h2>
+				<div class="project-list">
+					<div class="project-item">
+						<div class="project-header" onclick="toggleProject(this)">
+							<h3 class="project-title">
+								<span class="expand-icon">▶</span>
+								Qwirkle Score Tracker
+							</h3>
+						</div>
+						<div class="project-content">
+							<p class="project-description">A tool for tracking Qwirkle scores and managing player lists.</p>
+							<p class="project-context">My wife became obsessed with the board game "Qwirkle Cubes" during a
+								family vacation. We bring it with us to restaurants, bars, anywhere socially acceptable to
+								play. I built this tool as a token of my love for her and out of self-preservation for
+								myself to not get in trouble for forgetting to write down scores.</p>
+							
+							<div class="project-details">
+								<div class="project-evolution">
+									<h4>Evolution</h4>
+									<ol>
+										<li><a href="./qwirkle/index.html" target="_blank">Initial version</a> - Built by prompting Claude to create an artifact</li>
+										<li>Second version - Full-stack with Rails 8 + Hotwire</li>
+									</ol>
+								</div>
+								<div class="project-tech">
+									<h4>Technologies</h4>
+									<p>HTML, CSS, JavaScript, Rails 8, Hotwire, SQLite, fly.io, Claude, Cursor</p>
+								</div>
+								<div class="project-links">
+									<a href="./qwirkle/index.html" target="_blank" class="project-link">View Project →</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="project-placeholder">
+						<p>More projects coming soon...</p>
+					</div>
+				</div>
 			</section>
 
 			<section>
