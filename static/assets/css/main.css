@@ -171,7 +171,13 @@
      color: #e11d48;
  }
 
- /* Footer */
+ /* Hiring CTA */
+.hiring-cta {
+    color: #059669;
+    font-weight: 400;
+}
+
+/* Footer */
  footer {
      background: #f9fafb;
      padding: 1.5rem 2rem;
