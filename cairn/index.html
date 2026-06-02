@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cairn — One Word. One Sentence. Daily.</title>
+  <meta name="description" content="Cairn is the smallest possible journal. One word each morning, one sentence each evening, on your iPhone and Apple Watch.">
+  <style>
+    :root{
+      --bg:#FBF8F3; --text:#2B2722; --soft:#8A8175; --accent:#CF6B34; --card:#fff; --line:#ECE5DA;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#1A1714; --text:#F2ECE3; --soft:#9C9285; --accent:#E07B42; --card:#221E1A; --line:#332D27; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:640px;margin:0 auto;padding:80px 24px 64px;}
+    .word{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:54px;color:var(--accent);margin:0 0 8px;}
+    h1{font-family:Georgia,serif;font-size:24px;font-weight:400;margin:0 0 6px;}
+    .tag{color:var(--soft);font-size:17px;margin:0 0 40px;}
+    p{font-size:17px;}
+    .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;}
+    .links a{display:inline-block;padding:11px 20px;border-radius:999px;text-decoration:none;
+      font-size:15px;font-weight:600;border:1px solid var(--line);color:var(--text);}
+    .links a.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+    footer{margin-top:56px;color:var(--soft);font-size:13px;border-top:1px solid var(--line);padding-top:20px;}
+    footer a{color:var(--soft);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="word">patience</p>
+    <h1>Cairn</h1>
+    <p class="tag">One Word. One Sentence. Daily.</p>
+    <p>Cairn is the smallest possible journal. Each morning you choose one word for the day. Each evening you write one sentence about it. Over a year, 365 words become the story of your year.</p>
+    <p>It lives on your iPhone and Apple Watch, with widgets to keep today's word in view. Everything stays private — stored on your device and in your own iCloud. No accounts, no analytics, no tracking.</p>
+    <div class="links">
+      <a class="primary" href="/cairn/privacy">Privacy Policy</a>
+      <a href="/cairn/support">Support</a>
+    </div>
+    <footer>
+      Made by <a href="https://jonathanmeneses.com">Jonathan Meneses</a>.
+    </footer>
+  </div>
+</body>
+</html>
