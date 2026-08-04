@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cairn: notes on setting it down</title>
+  <meta name="description" content="I shipped a journaling app to the App Store and then stopped using it. Here is why, and the question I should have asked first.">
+  <style>
+    :root{ --bg:#FBF8F3; --text:#2B2722; --soft:#8A8175; --accent:#CF6B34; --line:#ECE5DA; }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#1A1714; --text:#F2ECE3; --soft:#9C9285; --accent:#E07B42; --line:#332D27; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.65;-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:680px;margin:0 auto;padding:64px 24px 80px;}
+    a.back{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;}
+    h1{font-family:Georgia,serif;font-size:32px;font-weight:400;margin:24px 0 8px;}
+    .lead{color:var(--soft);font-size:16px;margin:0 0 40px;}
+    h2{font-family:Georgia,serif;font-size:21px;font-weight:400;margin:40px 0 10px;}
+    p{font-size:17px;margin:0 0 16px;}
+    a{color:var(--accent);}
+    blockquote{margin:24px 0;padding:0 0 0 20px;border-left:3px solid var(--accent);
+      font-family:Georgia,serif;font-style:italic;font-size:19px;color:var(--text);}
+    .closing{font-family:Georgia,serif;font-style:italic;font-size:21px;color:var(--accent);margin-top:28px;}
+    footer{margin-top:56px;color:var(--soft);font-size:13px;border-top:1px solid var(--line);padding-top:20px;}
+    footer a{color:var(--soft);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/cairn">← Cairn</a>
+    <h1>Notes on setting it down</h1>
+    <p class="lead">I shipped a journaling app to the App Store and then stopped using it. Here is why.</p>
+
+    <p>Cairn is a small journal. You pick one word each morning, and add a sentence in the evening if you want to. It runs on iPhone and Apple Watch, has widgets and watch complications, syncs through your own iCloud, and collects no data at all. No accounts, no analytics, no servers.</p>
+
+    <p>It works, and it is still on the App Store. I stopped opening it about two months after launch.</p>
+
+    <h2>The problem was the trade, not the app</h2>
+
+    <p>Cairn asked for a Home Screen slot and a deliberate daily open. In return it gave back one word. Those are two of the most expensive things you can ask of someone's phone, and one word does not cover them. When I finally said it plainly, it came out as this:</p>
+
+    <blockquote>I needed my phone real estate more than I needed a word.</blockquote>
+
+    <p>The mistake is visible in my own commit history. After launch I added six things: memories that resurface on anniversaries, a growing cairn built from your words, a year in words poster, milestone celebrations, rotating encouragements, and an engine that brings old words back. All six were attempts to increase what the app gave back.</p>
+
+    <p>None of them reduced what it asked for.</p>
+
+    <p>My roadmap had a phase called "Delight and retention" and a phase called "Monetize." It had no phase for making the daily habit cheaper. I spent months raising the payoff and no time at all lowering the cost.</p>
+
+    <h2>What it should have been</h2>
+
+    <p>The version that would have worked was already built. I just never committed to it. The widget should have been the product, and the app should have been the accessory.</p>
+
+    <p>That version has no Home Screen presence. You tap the Lock Screen widget, a few suggested words appear, you tap one, and you are done. Two seconds, no app launch, no typing. The typing matters more than it sounds. Composing a word from scratch is a fifteen second task that needs energy I did not always have at 7am. Picking from a short list is one tap.</p>
+
+    <p>It would also have no reminder and no streak. The widget would just sit there, answerable, costing nothing on the days you ignored it. And the reward would not be a screen of stats you have to go looking for. It would be one thing a year, delivered outside the app: a printed book of your words.</p>
+
+    <p>That is a different product, and about a third of the code. I am not going to build it. But it is the honest answer to what this should have been.</p>
+
+    <h2>The question I should have asked first</h2>
+
+    <p>What does this cost someone every day, and what does it give back on the first day?</p>
+
+    <p>If something outside the user supplies the deadline or the effort, a product can afford to earn its place slowly. A birthday supplies urgency. A job supplies obligation. Other people supply the content. If nothing outside the user does any of that, the product has to be worth more than the attention it costs immediately, because nothing else is holding it up.</p>
+
+    <p>Cairn had no deadline and no second contributor. It was just me, asked once a day, indefinitely, to supply the only material the app had to work with. That is the hardest shape a capture product can take, and I picked it without noticing I was picking anything.</p>
+
+    <h2>What it taught me</h2>
+
+    <p>This was the first thing I shipped to the App Store, and most of what I got out of it was the shipping.</p>
+
+    <p>Keeping state in sync across devices is harder than it looks. Cairn shows the same day's word on an iPhone, an Apple Watch, a Home Screen widget, a Lock Screen widget and a watch complication. CloudKit handles the durable part, but it is not fast, so the watch could sit there showing yesterday while the phone already knew better. I ended up adding a direct phone to watch channel for the current day only, and leaving CloudKit to own the history. Two mechanisms, one source of truth, and a rule for which one wins when they disagree.</p>
+
+    <p>The other lesson is how little control you have once you leave the app. Lock Screen widgets and complications get a small space, a fixed set of layouts, and refreshes on the system's schedule rather than yours. You cannot assume your widget is current, so it reads from a cache the app keeps warm, and it has to look right even when that cache is a little stale. Designing for that is a different job from designing a screen.</p>
+
+    <h2>Where it is now</h2>
+
+    <p>Still on the App Store, still free, still collecting nothing. I shipped one last release to fix two real bugs, wrote this, and stopped.</p>
+
+    <p>I did not delete it. Cairn was built on the idea that a missed day is not a failure, which is why it counts words instead of streaks. It would be strange to hold the app to a stricter standard than it holds its user. If there is a stretch where one word a morning sounds good again, it will be there, working, with my words still in it.</p>
+
+    <p class="closing">Not never. Just not now.</p>
+
+    <footer>
+      <a href="/cairn">About Cairn</a> · <a href="/cairn/privacy">Privacy</a> · <a href="/cairn/support">Support</a> · <a href="https://jonathanmeneses.com">Jonathan Meneses</a>
+    </footer>
+  </div>
+</body>
+</html>
