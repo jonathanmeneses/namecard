@@ -130,10 +130,9 @@
 								same day's data through CloudKit, and how little control you have on iOS once you leave
 								the app. Lock Screen widgets and complications get a small space, a fixed set of layouts,
 								and refresh on the system's schedule rather than yours.</p>
-							<p class="project-context">I also stopped using it. I needed the Home Screen space more than I
-								needed the word, so I wrote up why: it asked for a daily open and gave back one word, and
-								every feature I added afterward raised what it gave back without ever lowering what it
-								cost. Set down on purpose. Still live, still works.</p>
+							<p class="project-context">I view it as feature complete for the moment. I like software
+								for an audience of one: a small tool that does its job, and can stay that way. Still
+								live, still works.</p>
 
 							<div class="project-details">
 								<div class="project-tech">
@@ -154,48 +153,40 @@
 						<div class="project-header" onclick="toggleProject(this)">
 							<span class="project-title">
 								<span class="expand-icon">▶</span>
-								Qwirkle Score Tracker
+								Cubing Blindfold Trainer
 							</span>
 						</div>
 						<div class="project-content">
-							<p class="project-description">A tool for tracking Qwirkle scores and managing player lists.
-							</p>
-							<p class="project-context">My wife became obsessed with the board game "Qwirkle Cubes"
-								during a
-								family vacation. We bring it with us to restaurants, bars, anywhere socially acceptable
-								to
-								play. I built this tool for her and to keep my from getting in trouble when i forget to
-								log scores.</p>
+							<p class="project-description">A coach for solving a Rubik's Cube blindfolded with Old
+								Pochmann, the classic beginner method. You memorize a scramble as a short string of
+								letters, then fix one piece at a time with a single repeating algorithm.</p>
+							<p class="project-context">It walks from zero to a first blind solve: letter the cube, trace
+								cycles until they close, then drill navigation, setups, memo, and letter-pair images.
+								Based on the method taught at jperm.net/bld.</p>
 
 							<div class="project-details">
-								<div class="project-evolution">
-									<h4>Evolution</h4>
-									<ol>
-										<li><a href="./qwirkle/index.html" target="_blank">Initial version</a> - Built
-											by prompting Claude to create an artifact. raw html, css, js. no frameworks.
-										</li>
-										<li><a href="https://previous.qwirkle.jonathanmeneses.com"
-												target="_blank">Second
-												version</a> -
-											Full-stack with Rails 8 + Hotwire. Deployed to a bare-metal server (Hetzner)
-											using Kamal.
-										</li>
-										<li><a href="https://qwirkle.jonathanmeneses.com" target="_blank">Third
-												version</a> -
-											Updated Kamal + Hetzner deployment that has progressive authentication to
-											allow for guest play,
-											the ability to join via
-											QR code, and live score updates using websockets (ActionCable).
-										</li>
-
-									</ol>
-								</div>
 								<div class="project-tech">
 									<h4>Technologies</h4>
-									<p>HTML, CSS, JavaScript, Rails 8, Hotwire, SQLite, Hetzner, Kamal, Claude, Cursor
-									</p>
+									<p>HTML, CSS, JavaScript</p>
+								</div>
+								<div class="project-links">
+									<a href="https://cubing.jonathanmeneses.com" target="_blank"
+										class="project-link">Open the trainer →</a>
 								</div>
 							</div>
+						</div>
+					</li>
+					<li class="project-item">
+						<div class="project-header" onclick="toggleProject(this)">
+							<span class="project-title">
+								<span class="expand-icon">▶</span>
+								Apnea Trainer
+							</span>
+						</div>
+						<div class="project-content">
+							<p class="project-description">A small trainer for practicing timed breath holds.</p>
+							<p class="project-context">Built as a personal practice tool: a session with a start and a
+								stop, for one person to use.</p>
 						</div>
 					</li>
 				</ul>
