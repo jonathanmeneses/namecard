@@ -45,10 +45,10 @@
 				<h2>Background</h2>
 				<ul>
 					<li>Product leader with 10+ years experience across insurance, health, and fintech</li>
-					<li>Building insurance and risk products for the commercial real estate industry at <a
-							href="https://www.safelease.com" target="_blank">SafeLease</a>, currently focused on
-						self-storage. <span class="hiring-cta"><a
-								href="https://jobs.ashbyhq.com/safelease" target="_blank">We're hiring!</a></span></li>
+					<li>Director of Product at <a href="https://www.safelease.com" target="_blank">SafeLease</a>,
+						leading insurance and compliance for manufactured housing community owners and operators.
+						I determine the business and distribution strategy in partnership with executive
+						sponsors.</li>
 					<li>Also available for product advisory and consulting — <a
 							href="mailto:jonathan.m.meneses@gmail.com">get in touch</a></li>
 				</ul>
@@ -58,7 +58,8 @@
 			<section>
 				<h2>What I'm Building</h2>
 				<ul>
-					<li>Insurance and financial products for the commercial real estate industry at SafeLease</li>
+					<li>SafeLease's manufactured housing line: insurance and compliance for community owners and
+						operators, carrying over what we learned from 4,000+ implementations.</li>
 				</ul>
 			</section>
 
@@ -67,18 +68,24 @@
 				<ul>
 					<li>AI agent development and LLM-powered automation</li>
 					<li>Full-stack Rails development (Hotwire, Turbo, Stimulus)</li>
-					<li>Insurance and commercial real estate domain expertise</li>
+					<li>Manufactured housing insurance and compliance</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>My Tech Stack</h2>
+				<h2>Productivity Stack</h2>
 				<ul>
-					<li>Frontend: TypeScript, React, Next.js, Rails + Hotwire</li>
-					<li>Backend: Ruby on Rails, Python</li>
-					<li>AI & Automation: Claude Code, MCPs, Cursor, n8n</li>
-					<li>Data: SQL, Python, Spreadsheets</li>
-					<li>Infrastructure: Hetzner, Kamal, Docker, GitHub Actions</li>
+					<li>Raycast</li>
+					<li>Obsidian</li>
+					<li>CMUX terminal</li>
+					<li>Primarily the Anthropic stack
+						<ul class="stack-sub">
+							<li>Claude Code</li>
+							<li>Artifacts</li>
+						</ul>
+					</li>
+					<li>Learn with NotebookLM</li>
+					<li>Explore and reach for other models and CLIs as needed</li>
 				</ul>
 			</section>
 
@@ -106,8 +113,7 @@
 										Hetzner, Kamal, Docker</p>
 								</div>
 								<div class="project-links">
-									<a href="https://momentvault.io" target="_blank" class="project-link">Visit
-										MomentVault →</a>
+									<a href="https://momentvault.io" target="_blank" class="project-link">momentvault.io</a>
 								</div>
 							</div>
 						</div>
@@ -130,10 +136,9 @@
 								same day's data through CloudKit, and how little control you have on iOS once you leave
 								the app. Lock Screen widgets and complications get a small space, a fixed set of layouts,
 								and refresh on the system's schedule rather than yours.</p>
-							<p class="project-context">I also stopped using it. I needed the Home Screen space more than I
-								needed the word, so I wrote up why: it asked for a daily open and gave back one word, and
-								every feature I added afterward raised what it gave back without ever lowering what it
-								cost. Set down on purpose. Still live, still works.</p>
+							<p class="project-context">I view it as feature complete for the moment. I like software
+								for an audience of one: a small tool that does its job, and can stay that way. Still
+								live, still works.</p>
 
 							<div class="project-details">
 								<div class="project-tech">
@@ -143,9 +148,36 @@
 								</div>
 								<div class="project-links">
 									<a href="https://apps.apple.com/app/cairn-daily-word/id6760871265" target="_blank"
-										class="project-link">Get Cairn on the App Store →</a>
-									<a href="/cairn/notes" class="project-link">What I learned building it →</a>
-									<a href="/cairn" class="project-link">About Cairn →</a>
+										class="project-link">App Store</a>
+									<a href="/cairn/notes" class="project-link">/cairn/notes</a>
+									<a href="/cairn" class="project-link">/cairn</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="project-item">
+						<div class="project-header" onclick="toggleProject(this)">
+							<span class="project-title">
+								<span class="expand-icon">▶</span>
+								Cubing Blindfold Trainer
+							</span>
+						</div>
+						<div class="project-content">
+							<p class="project-description">BLD Trainer is a coach for solving a Rubik's Cube
+								blindfolded with Old Pochmann, the classic beginner method. You memorize a scramble as a
+								short string of letters, then fix one piece at a time with a single repeating algorithm.</p>
+							<p class="project-context">It walks from zero to a first blind solve: letter the cube, trace
+								cycles until they close, then drill navigation, setups, memo, and letter-pair images.
+								Based on the method taught at jperm.net/bld.</p>
+
+							<div class="project-details">
+								<div class="project-tech">
+									<h4>Technologies</h4>
+									<p>HTML, CSS, JavaScript</p>
+								</div>
+								<div class="project-links">
+									<a href="https://cubing.jonathanmeneses.com" target="_blank"
+										class="project-link">cubing.jonathanmeneses.com</a>
 								</div>
 							</div>
 						</div>
@@ -161,39 +193,24 @@
 							<p class="project-description">A tool for tracking Qwirkle scores and managing player lists.
 							</p>
 							<p class="project-context">My wife became obsessed with the board game "Qwirkle Cubes"
-								during a
-								family vacation. We bring it with us to restaurants, bars, anywhere socially acceptable
-								to
-								play. I built this tool for her and to keep my from getting in trouble when i forget to
-								log scores.</p>
-
+								during a family vacation. We bring it with us to restaurants, bars, anywhere socially
+								acceptable to play. I built this tool for her and to keep my from getting in trouble when
+								i forget to log scores.</p>
 							<div class="project-details">
 								<div class="project-evolution">
 									<h4>Evolution</h4>
 									<ol>
-										<li><a href="./qwirkle/index.html" target="_blank">Initial version</a> - Built
-											by prompting Claude to create an artifact. raw html, css, js. no frameworks.
-										</li>
-										<li><a href="https://previous.qwirkle.jonathanmeneses.com"
-												target="_blank">Second
-												version</a> -
-											Full-stack with Rails 8 + Hotwire. Deployed to a bare-metal server (Hetzner)
-											using Kamal.
-										</li>
-										<li><a href="https://qwirkle.jonathanmeneses.com" target="_blank">Third
-												version</a> -
-											Updated Kamal + Hetzner deployment that has progressive authentication to
-											allow for guest play,
-											the ability to join via
-											QR code, and live score updates using websockets (ActionCable).
-										</li>
-
+										<li><a href="./qwirkle/index.html" target="_blank">/qwirkle</a> — raw HTML, CSS,
+											and JavaScript. No frameworks.</li>
+										<li><a href="https://qwirkle.jonathanmeneses.com"
+												target="_blank">qwirkle.jonathanmeneses.com</a> — Rails 8 and Hotwire on
+											Hetzner with Kamal. Guest play, join via QR code, and live scores over
+											websockets.</li>
 									</ol>
 								</div>
 								<div class="project-tech">
 									<h4>Technologies</h4>
-									<p>HTML, CSS, JavaScript, Rails 8, Hotwire, SQLite, Hetzner, Kamal, Claude, Cursor
-									</p>
+									<p>HTML, CSS, JavaScript, Rails 8, Hotwire, SQLite, Hetzner, Kamal</p>
 								</div>
 							</div>
 						</div>
